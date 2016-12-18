@@ -27,14 +27,52 @@ body {
   font-size: 2rem;
   line-height: 2.5rem;
   font-family: 'Univers55';
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  max-width: 1500px;
+
+  background: linear-gradient(133deg, #b400b6, #0038ea);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 44s ease infinite;
+  -moz-animation: AnimationName 44s ease infinite;
+  -o-animation: AnimationName 44s ease infinite;
+  animation: AnimationName 44s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
 }
+
+
 
 .selected {
   border-bottom: 1px solid;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1600px;
+
+  -webkit-box-shadow: 10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+  box-shadow:         10px 0px 30px -5px rgba(50, 50, 50, 0.5);
 }
 
 
