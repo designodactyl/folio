@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+/* — - - - NAV STYLES HERE — - - -  */
+header {
+  display: flex;
+  padding: 2rem 4rem 0 4rem;
+  z-index: 100; }
+
+#title {
+  flex: 0  50%; }
+
+nav {
+  flex: 0  50%; }
+
+nav ul {
+  display: flex; }
+
+nav li {
+  flex: 1; }
+
+.black {
+  transition-delay: 0.2s;
+  transition: 0.2s;
+  color: #000; }
+
+a:hover.upside {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+a:hover.backwards {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg); }
+
+a:hover.flip {
+  unicode-bidi: bidi-override;
+  direction: rtl; }

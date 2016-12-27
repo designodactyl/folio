@@ -1,10 +1,38 @@
+@charset "UTF-8";
+/* — - - - BASE STYLES HERE — - - -  */
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
+
+body {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: helvetica; }
+
+.selected {
+  border-bottom: 1px solid; }
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  /* — — — to hide image overflow on hove  - - - */ }
 
 ::-moz-selection {
-  background: #ff0078;
-}
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::-moz-selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
 ::selection {
-  background: #ff0078;
-}
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+a:hover {
+  opacity: 0.5; }

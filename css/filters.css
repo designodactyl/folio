@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+/* — - - - FILTER STYLES HERE — - - -  */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem; }
+
+#sort {
+  width: 32.5%; }
+
+#filters ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 2; }
+
+#filters li:last-child {
+  flex: 2; }
+
+#filters li {
+  flex: 1;
+  min-width: 80px; }
+
+.discipline {
+  cursor: pointer; }
+
+#disiplineFilters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem;
+  min-width: 200px; }
+
+#disiplineFilters ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  margin: 1rem 0 0 32.5%; }
+
+#disiplineFilters li {
+  flex: 0;
+  padding-right: 5px; }
+
+.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  z-index: -1; }
+
+.show {
+  opacity: 1;
+  transform: translateY(0%);
+  z-index: 0; }

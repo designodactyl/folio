@@ -1,0 +1,39 @@
+@import '_variables';
+
+.relatedProjects {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 6rem $page-spacer;
+  background: $white;
+  color: $black;
+  overflow-x: auto;
+}
+
+.relatedProjects h3 {
+  flex: 1;
+  margin-bottom: 4rem;
+}
+
+.projectSlider {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.projectTile {
+  flex: 1 0 25%;
+  margin-left: 2rem;
+}
+
+.projectTile:nth-of-type(1) {
+  margin-left:0rem;
+}
+
+.projectThumb {
+  margin-bottom: 2rem;
+}
+
+.fixed {
+  position: absolute;
+}

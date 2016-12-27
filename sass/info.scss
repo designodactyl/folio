@@ -1,0 +1,45 @@
+@import '_variables';
+
+/* — - - - INTRO AND DETAILS  LAYOUT FOR PROJECT PAGE COPY HERE — - - -  */
+
+.projectDetails {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.projectTitle {
+  flex: 1;
+  margin-bottom: 6rem;
+  padding-left: $page-spacer;
+  text-align: center;
+}
+
+.projectAppendix {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: -6rem $page-spacer 10rem $page-spacer;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  flex: 0 50%;
+}
+
+.details ul {
+  flex: 2;
+}
+
+.nextPrevious {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0 $page-spacer 6rem $page-spacer;
+}
+
+.next, .previous{
+  flex: 0 0 50%;
+}

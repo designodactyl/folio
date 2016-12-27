@@ -1,0 +1,15 @@
+@import '_variables';
+
+/* — - - - FOOTER STYLES HERE — - - -  */
+footer {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  padding: 16rem $page-spacer $page-spacer $page-spacer;
+}
+
+
+#footerContact {
+  flex-basis: 50%;
+  margin-left: auto;
+}

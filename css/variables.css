@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */

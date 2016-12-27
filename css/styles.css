@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* — - - - IMPORTS HERE — - - -  */
+/* — - - - VARIABLES ARE HERE — - - -  */
+@font-face {
+  font-family: 'Univers55';
+  src: url("../font/UniversLTStd.eot");
+  src: url("../font/UniversLTStd.eot?#iefix") format("embedded-opentype"), url("../font/UniversLTStd.woff") format("woff"), url("../font/UniversLTStd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: 16px/1 sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+main,
+li {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit; }
+
+strong {
+  font-weight: bold; }
+
+a,
+button {
+  color: inherit;
+  /*transition: .3s;*/ }
+
+a {
+  text-decoration: none; }
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer; }
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+/* — - - - NAV STYLES HERE — - - -  */
+header {
+  display: flex;
+  padding: 2rem 2rem 0 2rem; }
+
+#title {
+  flex: 0  50%; }
+
+nav {
+  flex: 0  50%; }
+
+nav ul {
+  display: flex; }
+
+nav li {
+  flex: 1; }
+
+/* — - - - PROJECTS OVERVIEW SECTION — - - -  */
+/* — - - - INTRO STYLES HERE — - - -  */
+section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
+#intro {
+  margin-bottom: 6rem;
+  padding-right: 2rem; }
+
+/* — - - - FILTER STYLES HERE — - - -  */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem; }
+
+#sort {
+  flex: 1;
+  min-width: 100px; }
+
+#filters ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 2; }
+
+#filters li:last-child {
+  flex: 2; }
+
+#filters li {
+  flex: 1;
+  min-width: 80px; }
+
+/* — - - - PROJECTS STYLES HERE — - - -  */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 2rem 0 2rem; }
+
+.project {
+  flex: 0 calc(25% - 2rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 3rem 1rem 3rem 1rem;
+  min-width: 20rem; }
+
+.project li {
+  display: inline; }
+
+/* — - - - PROJECTS IMAGES STYLES HERE — - - -  */
+.project img {
+  display: none;
+  width: 35%;
+  position: absolute;
+  margin: -10% 0 0 -12.5%; }
+
+.project:hover > img {
+  display: inline;
+  z-index: 1; }
+
+.project:hover {
+  z-index: 105 !important; }
+
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.project li {
+  font-style: italic; }
+
+.dimmed {
+  color: #333; }
+
+/* — - - - BASE STYLES HERE — - - -  */
+#wrapper {
+  background: #000;
+  color: #fff; }
+
+/* — - - - BASE STYLES HERE — - - -  */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: helvetica; }
+
+.selected {
+  border-bottom: 1px solid; }
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+::-moz-selection {
+  background: #ff0078; }
+
+::selection {
+  background: #ff0078; }

@@ -1,0 +1,46 @@
+@import '_variables';
+
+/* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
+
+.image_layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 12rem;
+}
+
+.full-image {
+  flex: 0 0 100vw;
+  width: 100vw;
+  margin-bottom: 4rem;
+}
+
+.full-image img,
+.big-image img,
+
+.left-image img,
+.right-image img {
+  width: 100%
+}
+
+.big-image {
+  flex: 0 0 100%;
+  padding: 0 $page-spacer 0 $page-spacer;
+  margin-bottom: $spacer;
+}
+
+.left-image,
+.right-image  {
+  flex: 0 50%;
+  min-width: 300px;
+  margin-bottom: $spacer;
+}
+
+.left-image {
+  padding: 0 1rem 0 $page-spacer;
+}
+
+.right-image {
+  padding: 0 $page-spacer 0 1rem;
+  margin-left: auto;
+}

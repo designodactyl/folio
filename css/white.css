@@ -1,6 +1,5 @@
+@charset "UTF-8";
 /* — - - - BASE STYLES HERE — - - -  */
-
 #wrapper {
-	background: #fff;
-  color: #000;
-}
+  background: red;
+  color: #000; }

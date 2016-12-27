@@ -1,0 +1,66 @@
+@import '_variables';
+
+/* — - - - FILTER STYLES HERE — - - -  */
+
+
+#filters{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: $spacer;
+}
+
+#sort {
+  width: 32.5%;
+}
+
+#filters ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 2;
+}
+
+#filters li:last-child {
+  flex: 2;
+}
+
+#filters li {
+  flex: 1;
+  min-width: 80px;
+}
+
+.discipline {
+  cursor: pointer;
+}
+
+#disiplineFilters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem;
+  min-width: 200px;
+}
+
+#disiplineFilters ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  margin: 1rem 0 0 32.5%;
+}
+
+#disiplineFilters li {
+  flex: 0;
+  padding-right: 5px;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: $transiton-speed;
+  z-index: -1;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0%);
+  z-index: 0;
+
+}

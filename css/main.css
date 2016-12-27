@@ -1,17 +1,11 @@
-/* — - - - BASE STYLES HERE — - - -  */
-
-@font-face {
-	font-family: 'Univers55';
-	src: url('../font/UniversLTStd.eot');
-	src: url('../font/UniversLTStd.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversLTStd.woff') format('woff'),
-		url('../font/UniversLTStd.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-/* —  DODGY FONT DONT USE, RMEEBR TO SWAP FOR LEGIT VERSION
+@charset "UTF-8";
+/* — - - - IMPORTS HERE — - - -  */
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
 @font-face {
 	font-family: 'Univers56';
 	src: url('../font/UniversBQ-Italic.eot');
@@ -22,196 +16,581 @@
 	font-style: italic;
 }
 -  */
+* {
+  box-sizing: border-box; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font: 16px/1 sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+main,
+li {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: normal; }
+
+strong {
+  font-weight: bold; }
+
+a,
+button {
+  color: inherit;
+  /* transition: .1s; */ }
+
+a {
+  text-decoration: none; }
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer; }
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+/* — - - - BASE STYLES HERE — - - -  */
+html {
+  font-size: 62.5%; }
 
 body {
   font-size: 2rem;
   line-height: 2.5rem;
-  font-family: 'Univers55';
+  font-family: helvetica;
+  background: #000;
+  color: #f0f0f0; }
 
-  background: linear-gradient(133deg, #b400b6, #0038ea);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 44s ease infinite;
-  -moz-animation: AnimationName 44s ease infinite;
-  -o-animation: AnimationName 44s ease infinite;
-  animation: AnimationName 44s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-      0%{background-position:4% 0%}
-      50%{background-position:97% 100%}
-      100%{background-position:4% 0%}
-  }
-  @-moz-keyframes AnimationName {
-      0%{background-position:4% 0%}
-      50%{background-position:97% 100%}
-      100%{background-position:4% 0%}
-  }
-  @-o-keyframes AnimationName {
-      0%{background-position:4% 0%}
-      50%{background-position:97% 100%}
-      100%{background-position:4% 0%}
-  }
-  @keyframes AnimationName {
-      0%{background-position:4% 0%}
-      50%{background-position:97% 100%}
-      100%{background-position:4% 0%}
-  }
-}
-
-
-
-.selected {
-  border-bottom: 1px solid;
-}
+.underline {
+  border-bottom: 1px solid; }
 
 #wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1600px;
+  overflow: hidden;
+  /* — — — to hide image overflow on hove  - - - */ }
 
-  -webkit-box-shadow: 10px 0px 30px -5px rgba(50, 50, 50, 0.5);
-  -moz-box-shadow:    10px 0px 30px -5px rgba(50, 50, 50, 0.5);
-  box-shadow:         10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+::-moz-selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::-moz-selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+::selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  vertical-align: middle; }
+
+p {
+  text-indent: 6rem; }
+
+/* — - - - GLOBAL BLACK CHANGES  HERE — - - -  */
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
-
-
+-  */
 /* — - - - NAV STYLES HERE — - - -  */
-
 header {
   display: flex;
-  padding: 2rem 2rem 0 2rem;
-}
+  padding: 2rem 4rem 0 4rem;
+  z-index: 100; }
 
 #title {
-    flex: 0  50%;
-}
+  flex: 0  50%; }
 
-nav  {
-  flex: 0  50%;
-}
+nav {
+  flex: 0  50%; }
 
 nav ul {
-  display: flex;
-}
-
+  display: flex; }
 
 nav li {
-  flex: 1;
+  flex: 1; }
+
+.black {
+  transition-delay: 0.2s;
+  transition: 0.2s;
+  color: #000; }
+
+a:hover.upside {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+a:hover.backwards {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg); }
+
+a:hover.flip {
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
+-  */
+/* — - - - INTRO AND DETAILS  LAYOUT FOR PROJECT PAGE COPY HERE — - - -  */
+.projectDetails {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
 
+.projectTitle {
+  flex: 1;
+  margin-bottom: 6rem;
+  padding-left: 4rem;
+  text-align: center; }
 
-/* — - - - INTRO STYLES HERE — - - -  */
+.projectAppendix {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: -6rem 4rem 10rem 4rem; }
 
+.details {
+  display: flex;
+  flex-direction: row;
+  flex: 0 50%; }
+
+.details ul {
+  flex: 2; }
+
+.nextPrevious {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin: 0 4rem 6rem 4rem; }
+
+.next, .previous {
+  flex: 0 0 50%; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+#bio {
+  height: 100vh;
+  width: calc(50vw + 3rem);
+  position: fixed;
+  z-index: 50;
+  background: #f0f0f0;
+  float: right;
+  padding: 14.25rem 4rem 3rem 4rem;
+  transition: 0.3s; }
+
+.closed {
+  right: calc(-50vw - 4em); }
+
+.open {
+  right: 0; }
+
+.intro {
+  margin-bottom: 6rem;
+  padding-right: 4rem; }
+
+.cv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  padding-right: 4rem; }
+
+.title {
+  flex: 1;
+  margin-bottom: 4rem;
+  min-width: 100px; }
+
+.cv ul {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 300px; }
+
+.cv li {
+  flex: 1; }
+
+.cv li:nth-child(even) {
+  margin-bottom: 2rem; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+/* — - - - INTRO STYLES FOR HOMEPAGE HERE — - - -  */
 section {
   display: flex;
   flex-direction: column;
   width: 50%;
   margin-left: auto;
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 10rem; }
 
-}
-
-#intro {
+.intro {
+  flex: 1;
   margin-bottom: 6rem;
-  padding-right: 2rem;
-}
+  padding-right: 2rem; }
 
-
-/* — - - - FILTER STYLES HERE — - - -  */
-
-#filters{
+/* — - - - PROJECTS STYLES HERE — - - -  */
+main {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 2rem;
+  justify-content: space-around; }
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 calc(25% - 8rem);
+  text-align: center;
+  margin: 0 4rem 2rem 4rem;
+  /*padding: 3rem 1rem 3rem 1rem;*/
+  min-width: 20rem;
+  min-height: 17.5rem;
+  position: relative; }
+
+.projectImage {
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.projectImage img {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  opacity: 0; }
+
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.active:hover {
+  cursor: pointer; }
+
+.active:hover > .projectImage img:nth-child(1) {
+  display: block;
+  opacity: 1; }
+
+.active:hover > .projectText, .project:hover {
+  z-index: 10; }
+
+/* — - - - PROJECTS IMAGES STYLES HERE — - - -
+.project img {
+  display: inline;
+  position: absolute;
+  width: 50vw;
+  z-index: -1;
 }
 
-#sort {
-  flex: 1;
-  min-width: 100px;
+/* —
+.project:hover > img {
+  display: inline;
+  cursor: pointer;
 }
+
+.project:hover {
+  z-index: 1 !important;
+}
+
+ */
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.projectText li {
+  display: inline;
+  font-style: italic; }
+
+.dimmed {
+  opacity: 0.2; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+/* — - - - FILTER STYLES HERE — - - -  */
+#filters {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem; }
+
+#sort {
+  width: 32.5%; }
 
 #filters ul {
   display: flex;
   flex-wrap: nowrap;
-  flex: 2;
-}
+  flex: 2; }
 
 #filters li:last-child {
-  flex: 2;
-}
+  flex: 2; }
 
 #filters li {
   flex: 1;
-  min-width: 80px;
-}
+  min-width: 80px; }
 
+.discipline {
+  cursor: pointer; }
 
-/* — - - - PROJECTS STYLES HERE — - - -  */
-
-main {
+#disiplineFilters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0 2rem 0 2rem;
+  padding-right: 2rem;
+  min-width: 200px; }
+
+#disiplineFilters ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  margin: 1rem 0 0 32.5%; }
+
+#disiplineFilters li {
+  flex: 0;
+  padding-right: 5px; }
+
+.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  z-index: -1; }
+
+.show {
+  opacity: 1;
+  transform: translateY(0%);
+  z-index: 0; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
+-  */
+/* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
+.image_layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 12rem; }
 
-.project{
-  flex:0 calc(25% - 2rem);
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 3rem 1rem 3rem 1rem;
-  min-width: 20rem;
+.full-image {
+  flex: 0 0 100vw;
+  width: 100vw;
+  margin-bottom: 4rem; }
+
+.full-image img,
+.big-image img,
+.left-image img,
+.right-image img {
+  width: 100%; }
+
+.big-image {
+  flex: 0 0 100%;
+  padding: 0 4rem 0 4rem;
+  margin-bottom: 2rem; }
+
+.left-image,
+.right-image {
+  flex: 0 50%;
+  min-width: 300px;
+  margin-bottom: 2rem; }
+
+.left-image {
+  padding: 0 1rem 0 4rem; }
+
+.right-image {
+  padding: 0 4rem 0 1rem;
+  margin-left: auto; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
+-  */
+.relatedProjects {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 6rem 4rem;
+  background: #f0f0f0;
+  color: #000;
+  overflow-x: auto; }
 
-.project li{
-  display: inline;
+.relatedProjects h3 {
+  flex: 1;
+  margin-bottom: 4rem; }
+
+.projectSlider {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
+.projectTile {
+  flex: 1 0 25%;
+  margin-left: 2rem; }
+
+.projectTile:nth-of-type(1) {
+  margin-left: 0rem; }
+
+.projectThumb {
+  margin-bottom: 2rem; }
+
+.fixed {
+  position: absolute; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
-
-/* — - - - PROJECTS IMAGES STYLES HERE — - - -  */
-.project img {
-  display: none;
-  width: 35%;
-  position: absolute;
-  margin:-10% 0 0 -12.5%;
-}
-
-.project:hover > img {
-  display: inline;
-    z-index: 1;
-}
-
-.project:hover {
-  z-index: 105 !important;
-}
-
-/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
-
-
-.project li{
-  font-style: italic;
-}
-
-.project li a:hover {
-  color: #fff;
-}
-
-.dimmed {
-  color: #333;
-}
-
-
+-  */
 /* — - - - FOOTER STYLES HERE — - - -  */
 footer {
   display: flex;
   flex: 1;
   align-items: flex-end;
-  padding: 16rem 2rem 2rem 2rem;
-}
-
+  padding: 16rem 4rem 4rem 4rem; }
 
 #footerContact {
   flex-basis: 50%;
-  margin-left: auto;
-}
+  margin-left: auto; }

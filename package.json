@@ -1,0 +1,17 @@
+{
+  "name": "folio",
+  "version": "1.0.0",
+  "description": "Personal folio development. First time using git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sass-variables": "^1.1.1"
+  }
+}

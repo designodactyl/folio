@@ -1,0 +1,54 @@
+@import '_variables';
+
+#bio {
+  height: 100vh;
+  width: calc(50vw + 3rem);
+  position: fixed;
+  z-index: 50;
+  background: $white;
+  float: right;
+  padding: 14.25rem $page-spacer 3rem 4rem;
+  transition: $transiton-speed;
+}
+
+.closed {
+  right: calc(-50vw - 4em);
+}
+
+.open {
+  right: 0;
+}
+
+.intro {
+  margin-bottom: 6rem;
+  padding-right: $page-spacer;
+}
+
+
+.cv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  padding-right: $page-spacer;
+}
+
+.title {
+  flex:1;
+  margin-bottom: 4rem;
+  min-width: 100px;
+}
+
+.cv ul {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 300px;
+}
+
+.cv li{
+  flex: 1;
+}
+
+.cv li:nth-child(even){
+  margin-bottom: 2rem;
+}

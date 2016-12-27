@@ -2,161 +2,399 @@
 <html>
   <head>
     <title>FormFormForm</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-      <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/black.css">
   </head>
 
   <body>
-    <div id="wrapper">
+    <div id="bio" class="closed">
+      <div class="intro black">
+        <p>Portfolio of designer Daniel Flynn. Work featured here has been completed through private practice or during time spent at Spin, London and Maud, Sydney.</p>
+      </div>
 
+      <div class="cv black">
+        <div class ="title">
+          CV
+        </div>
+          <ul>
+            <li>2018&#8212;</li> <li>Founder of FORM</li>
+            <li>2015&#8212;17</li> <li>Creative Director</br>@Maud</li>
+            <li>2010&#8212;14</li> <li>Senior Designer</br>@SPIN</li>
+            <li>2009&#8212;10</li><li>Three&#215;3</li>
+          </ul>
+      </div>
+      <div class="bioContact black">
+        To discuss a project or say hi <a href="mailto:info@formformform.co" class="underline">info@formformform.co</a> /
+        <a href="#" class="underline">@function_form</a>
+      </div>
+    </div>
+
+    <div id="wrapper">
       <header>
         <div id="title">
-          <span class="condensed">FORM</span>FORM<span class ="extended">FORM</span>
+          <h1><a href="#" class= "backwards">FORM</a><a href="#" class="flip">FORM</a><a href="#" class="upside">FORM</a></h1>
         </div>
 
         <nav>
           <ul>
-            <li><a href="#" class="selected">Index</a></li>
+            <li><a href="#" class="underline">Index</a></li>
             <li><a href="#">Archive</a></li>
-            <li><a href="#">Info</a></li>
+            <li class="info"><a href="#" >Info</a></li>
+            <li class="info" style="display:none"><a href="#" >Close &#215;</a></li>
           </ul>
         </nav>
       </header>
+
       <section>
-        <div id="intro">
-          A selection of commissioned and collaborative work by Dan Flynn. Currently Creative Director @Maud, Sydney. Previously @SPIN, London.
+        <div class="intro">
+          <p>A selection of commissioned and collaborative work by Dan Flynn. Currently Creative Director @Maud, Sydney. Previously @SPIN, London.</p>
         </div>
 
         <div id="filters">
-          <div id="sort">Sort&nbsp;by:</div>
+          <div id="sort">
+            Sort&nbsp;by:
+          </div>
           <ul>
-            <li><a href="#" class="selected">Name</a></li>
+            <li><a href="#" class="underline">Name</a></li>
             <li><a href="#">Date</a></li>
-            <li><a href="#">Discipline&nbsp;&darr;</a></li>
+            <li class="discipline">Discipline&nbsp;&darr;</li>
+          </ul>
+        </div>
+        <div id="disiplineFilters" >
+          <ul class="hide">
+            <li><a href="#" class="underline">All,</a></li>
+            <li><a href="#">Digital,</a></li>
+            <li><a href="#">Identity,</a></li>
+            <li><a href="#">Motion,</a></li>
+            <li><a href="#">Print</a></li>
           </ul>
         </div>
       </section>
 
       <main>
-        <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
-        </div>
         <div class="project dimmed">
-          AGI Open
-          <ul>
-            <li>Digital,</li>
-            <li>Motion,</li>
-            <li>Print</li>
-          </ul>
-          &#8212;2013
-        </div>
-
-        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
             <img src="images/bbSuite.jpg"/>
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          </div>
         </div>
 
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="project_name.html">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <a href="project_name.html"><img src="images/bbSuite.jpg"/></a>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
-        <div class="project dimmed">
-          AGI Open
-          <ul>
-            <li>Digital,</li>
-            <li>Motion,</li>
-            <li>Print</li>
-          </ul>
-          &#8212;2013
-        </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
         <div class="project active">
-            AGI Open
-            <ul>
-              <li><a href="#">Digital,</a></li>
-              <li><a href="#">Motion,</a></li>
-              <li><a href="#">Print</a></li>
-            </ul>
-            &#8212;2013
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
         </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+        <div class="project active">
+          <div class="projectText">
+            <a href="#">AGI Open</a>
+              <ul>
+                <li><a href="#">Digital,</a></li>
+                <li><a href="#">Motion,</a></li>
+                <li><a href="#">Print</a></li>
+              </ul>
+              &#8212;2013
+          </div>
+          <div class="projectImage">
+            <img src="images/bbSuite.jpg"/>
+          </div>
+        </div>
+
+
+
+
 
       </main>
 
       <footer>
         <div id="toTop">
-          Buzz back up &uarr;
+          <a href="#">Buzz back up &uarr;</a>
         </div>
 
         <div id="footerContact">
@@ -165,6 +403,8 @@
           <a href="#">@function_form</a>
         </div>
       </footer>
-    </div>  
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

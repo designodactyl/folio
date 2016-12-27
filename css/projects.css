@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* COOL CCOLOR MIXES HERE
+$black: pink !global;
+$white: blue !global;
+*/
+/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+/* — - - - INTRO STYLES FOR HOMEPAGE HERE — - - -  */
+section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem; }
+
+.intro {
+  flex: 1;
+  margin-bottom: 6rem;
+  padding-right: 2rem; }
+
+/* — - - - PROJECTS STYLES HERE — - - -  */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 0 calc(25% - 8rem);
+  text-align: center;
+  margin: 0 4rem 2rem 4rem;
+  /*padding: 3rem 1rem 3rem 1rem;*/
+  min-width: 20rem;
+  min-height: 17.5rem;
+  position: relative; }
+
+.projectImage {
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
+
+.projectImage img {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  opacity: 0; }
+
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.active:hover {
+  cursor: pointer; }
+
+.active:hover > .projectImage img:nth-child(1) {
+  display: block;
+  opacity: 1; }
+
+.active:hover > .projectText, .project:hover {
+  z-index: 10; }
+
+/* — - - - PROJECTS IMAGES STYLES HERE — - - -
+.project img {
+  display: inline;
+  position: absolute;
+  width: 50vw;
+  z-index: -1;
+}
+
+/* —
+.project:hover > img {
+  display: inline;
+  cursor: pointer;
+}
+
+.project:hover {
+  z-index: 1 !important;
+}
+
+ */
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.projectText li {
+  display: inline;
+  font-style: italic; }
+
+.dimmed {
+  opacity: 0.2; }

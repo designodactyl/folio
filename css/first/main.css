@@ -1,0 +1,217 @@
+/* — - - - BASE STYLES HERE — - - -  */
+
+@font-face {
+	font-family: 'Univers55';
+	src: url('../font/UniversLTStd.eot');
+	src: url('../font/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversLTStd.woff') format('woff'),
+		url('../font/UniversLTStd.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* —  DODGY FONT DONT USE, RMEEBR TO SWAP FOR LEGIT VERSION
+@font-face {
+	font-family: 'Univers56';
+	src: url('../font/UniversBQ-Italic.eot');
+	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../font/UniversBQ-Italic.woff') format('woff'),
+		url('../font/UniversBQ-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+-  */
+
+body {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: 'Univers55';
+
+  background: linear-gradient(133deg, #b400b6, #0038ea);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 44s ease infinite;
+  -moz-animation: AnimationName 44s ease infinite;
+  -o-animation: AnimationName 44s ease infinite;
+  animation: AnimationName 44s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:4% 0%}
+      50%{background-position:97% 100%}
+      100%{background-position:4% 0%}
+  }
+}
+
+
+
+.selected {
+  border-bottom: 1px solid;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1600px;
+
+  -webkit-box-shadow: 10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+  box-shadow:         10px 0px 30px -5px rgba(50, 50, 50, 0.5);
+}
+
+
+/* — - - - NAV STYLES HERE — - - -  */
+
+header {
+  display: flex;
+  padding: 2rem 2rem 0 2rem;
+}
+
+#title {
+    flex: 0  50%;
+}
+
+nav  {
+  flex: 0  50%;
+}
+
+nav ul {
+  display: flex;
+}
+
+
+nav li {
+  flex: 1;
+}
+
+
+/* — - - - INTRO STYLES HERE — - - -  */
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+
+}
+
+#intro {
+  margin-bottom: 6rem;
+  padding-right: 2rem;
+}
+
+
+/* — - - - FILTER STYLES HERE — - - -  */
+
+#filters{
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 2rem;
+}
+
+#sort {
+  flex: 1;
+  min-width: 100px;
+}
+
+#filters ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 2;
+}
+
+#filters li:last-child {
+  flex: 2;
+}
+
+#filters li {
+  flex: 1;
+  min-width: 80px;
+}
+
+
+/* — - - - PROJECTS STYLES HERE — - - -  */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 2rem 0 2rem;
+}
+
+.project{
+  flex:0 calc(25% - 2rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 3rem 1rem 3rem 1rem;
+  min-width: 20rem;
+}
+
+.project li{
+  display: inline;
+}
+
+/* — - - - PROJECTS IMAGES STYLES HERE — - - -  */
+.project img {
+  display: none;
+  width: 35%;
+  position: absolute;
+  margin:-10% 0 0 -12.5%;
+}
+
+.project:hover > img {
+  display: inline;
+    z-index: 1;
+}
+
+.project:hover {
+  z-index: 105 !important;
+}
+
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+
+
+.project li{
+  font-style: italic;
+}
+
+.project li a:hover {
+  color: #fff;
+}
+
+.dimmed {
+  color: #333;
+}
+
+
+/* — - - - FOOTER STYLES HERE — - - -  */
+footer {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  padding: 16rem 2rem 2rem 2rem;
+}
+
+
+#footerContact {
+  flex-basis: 50%;
+  margin-left: auto;
+}

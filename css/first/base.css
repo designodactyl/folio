@@ -1,0 +1,10 @@
+html {
+    font-size: 62.5%;
+}
+
+::-moz-selection {
+  background: #ff0078;
+}
+::selection {
+  background: #ff0078;
+}

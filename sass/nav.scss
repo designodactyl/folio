@@ -1,0 +1,52 @@
+@import '_variables';
+
+/* — - - - NAV STYLES HERE — - - -  */
+
+header {
+  display: flex;
+  padding: 2rem $page-spacer 0 $page-spacer;
+  z-index: 100;
+}
+
+#title {
+    flex: 0  50%;
+}
+
+nav  {
+  flex: 0  50%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+}
+
+.black {
+  transition-delay: 0.2s;
+  transition: 0.2s;
+  color: $black;
+}
+
+a:hover.upside {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
+
+a:hover.backwards {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+}
+
+a:hover.flip {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
