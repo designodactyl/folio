@@ -5,7 +5,7 @@
   width: calc(50vw + 3rem);
   position: fixed;
   z-index: 50;
-  background: $white;
+  background: $secondary-color;
   float: right;
   padding: 14.25rem $page-spacer 3rem 4rem;
   transition: $transiton-speed;
@@ -17,11 +17,6 @@
 
 .open {
   right: 0;
-}
-
-.intro {
-  margin-bottom: 6rem;
-  padding-right: $page-spacer;
 }
 
 

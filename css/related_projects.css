@@ -1,47 +1,140 @@
 @charset "UTF-8";
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 .relatedProjects {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0 6rem 4rem;
-  background: #f0f0f0;
-  color: #000;
-  overflow-x: auto; }
+  padding: 2rem 0 6rem 0;
+  background: #191919;
+  color: #f0f0f0; }
 
 .relatedProjects h3 {
-  flex: 1;
-  margin-bottom: 4rem; }
+  margin-bottom: 5rem;
+  padding-left: 4rem; }
 
 .projectSlider {
-  flex: 1;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
 
 .projectTile {
-  flex: 1 0 25%;
-  margin-left: 2rem; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2rem;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+.projectTile:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing; }
 
 .projectTile:nth-of-type(1) {
   margin-left: 0rem; }
 
 .projectThumb {
-  margin-bottom: 2rem; }
+  margin-bottom: 0rem; }
+
+.projectTextOverlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #f0f0f0;
+  color: #191919;
+  transform: translateY(0);
+  transition: .2s ease-in-out;
+  opacity: 0; }
+
+.projectTile:hover > .projectTextOverlay {
+  transform: translateY(0);
+  opacity: 1; }
+
+.projectTextOverlay li {
+  display: inline;
+  font-style: italic; }
 
 .fixed {
   position: absolute; }
+
+/* — - - - CUSTOM OWL SLIDER STYLES HERE — - - -  */
+.owl-next, .owl-prev {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 5%;
+  background: #191919;
+  opacity: 0;
+  transition: .2s ease-in-out;
+  /* — - - - FIX FOR BLURRY ROTATED TEXT IN CHROME — - - -  */
+  -webkit-transform: translateZ(0) scale(1, 1); }
+
+.owl-prev div {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg); }
+
+.owl-next div {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg); }
+
+.owl-next {
+  right: 0; }
+
+.owl-next.disabled {
+  transform: translateX(100%); }
+
+.owl-next.disabled:hover {
+  transform: translateX(100%); }
+
+.owl-prev.disabled {
+  transform: translateX(-100%); }
+
+.owl-prev.disabled:hover {
+  transform: translateX(-100%); }
+
+.owl-next:hover, .owl-prev:hover {
+  opacity: 1; }

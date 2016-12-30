@@ -33,7 +33,7 @@ $primary-color: rgb(0, 0, 145);
 $secondary-color: White;
 */
 /* — - - - NAV STYLES HERE — - - -  */
-header {
+#header {
   padding: 2rem 4rem 0 4rem;
   z-index: 100;
   position: absolute;
@@ -43,26 +43,22 @@ header {
   display: flex;
   flex-direction: row; }
 
-#title {
+#formTitle {
   flex: 0  50%; }
 
-nav {
+#navigation {
   flex: 0  50%; }
 
-nav ul {
+#navigation ul {
   display: flex; }
 
-nav li {
-  flex: 1;
-  cursor: pointer; }
+#navigation li {
+  flex: 1; }
 
 .black {
   transition-delay: 0.2s;
   transition: 0.2s;
   color: #f0f0f0; }
-
-.black a:hover {
-  border-bottom: 1px solid #f0f0f0; }
 
 a:hover.upside {
   display: inline-block;

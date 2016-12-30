@@ -15,7 +15,7 @@ section {
 .intro {
   flex: 1;
   margin-bottom: 6rem;
-  padding-right: $spacer;
+  padding-right: $page-spacer;
 }
 
 
@@ -26,6 +26,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  position: relative ;
 }
 
 .project{
@@ -41,6 +42,8 @@ main {
   min-width: 20rem;
   min-height: 17.5rem;
   position: relative;
+
+  transition: opacity .2s ease-in-out;
 }
 
 .projectImage {
@@ -50,6 +53,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  z-index: -10;
 }
 
 .projectImage img {
@@ -60,11 +64,11 @@ main {
   transform: translate(-50%, -50%);
   transition: opacity .15s ease-in-out;
   opacity: 0;
-
 }
 
-.projectText {
-
+.projectText li {
+  display: inline;
+  font-style: italic;
 }
 
 /* — - - - PROJECTS HOVER STYLES HERE — - - -  */
@@ -72,47 +76,73 @@ main {
     cursor: pointer;
 }
 
-.active:hover > .projectImage img:nth-child(1) {
+
+
+li.image_holder  {
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: -10;
+}
+
+li.image_holder img {
+  position: fixed;
   display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  opacity: 0;
+}
+
+.projectText li:hover + li.image_holder img {
+  visibility: visible;
   opacity: 1;
 }
 
-.active:hover > .projectText, .project:hover {
-  z-index: 10;
+.project.dimmed .projectText li:hover + li.image_holder img {
+  display: none;
+  opacity: 0;
 }
 
 
+/*.active:hover > .projectImage img:nth-child(1) {
+  visibility: visible;
+  opacity: 1;
+}*/
 
-/* — - - - PROJECTS IMAGES STYLES HERE — - - -
-.project img {
-  display: inline;
-  position: absolute;
-  width: 50vw;
-  z-index: -1;
+
+.projectText:hover + .projectImage img{
+  opacity: 1;
 }
 
-/* —
-.project:hover > img {
-  display: inline;
-  cursor: pointer;
+
+.active > .projectText, .project:hover {
+  z-index: 1;
 }
 
-.project:hover {
-  z-index: 1 !important;
+.dimmed:hover {
+  cursor: default;
 }
 
- */
-
-/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
-
-.projectText li {
-  display: inline;
-  font-style: italic;
+.dimmed a:hover {
+  cursor: default;
+  border: none;
 }
 
-.projectText li a:hover {
+.dimmed:hover > .projectImage img:nth-child(1) {
+  display: none;
+  cursor: default;
 }
 
 .dimmed {
-  opacity: 0.2;
+  opacity: 0.1;
+}
+
+.dimmed img {
+  display: none;
+  visibility: hidden;
 }

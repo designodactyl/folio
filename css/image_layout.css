@@ -1,20 +1,37 @@
 @charset "UTF-8";
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
 .image_layout {
   display: flex;
@@ -40,13 +57,45 @@ $white: blue !global;
 
 .left-image,
 .right-image {
-  flex: 0 50%;
+  flex: 0 calc(50% - 5rem);
   min-width: 300px;
   margin-bottom: 2rem; }
 
 .left-image {
-  padding: 0 1rem 0 4rem; }
+  margin: 0 1rem 2rem 4rem; }
 
 .right-image {
-  padding: 0 4rem 0 1rem;
+  margin: 0 4rem 2rem 1rem;
   margin-left: auto; }
+
+/* — - - - DIGITAL IMAGES WITH DROP SHADOW STYLING — - - -  */
+.digital-image {
+  background: #c8c8c8;
+  padding: 5%; }
+
+.digital-image img {
+  box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.5); }
+
+/* — - - - SIDE DISCIPLINES NAV — - - -  */
+.sideDisciplines {
+  position: fixed;
+  right: -220px;
+  /* –– 1/2 width -some space on the side -  */
+  top: 50vh;
+  height: 20px;
+  width: 400px;
+  text-align: center;
+  font-style: italic;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transition: .2s ease-in-out; }
+
+.sideDisciplines li {
+  display: inline-block; }
+
+.disciplines li:hover {
+  border-bottom: 1px solid #191919;
+  cursor: pointer; }
+
+.appear {
+  right: -160px; }

@@ -1,25 +1,48 @@
 /* — - - - VARIABLES ARE HERE — - - -  */
 
-$black: #000 !global;
-$white: rgb(240, 240, 240) !global;
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
 $transiton-speed: 0.3s;
 $spacer: 2rem;
 $page-spacer: 4rem;
 
 
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
 
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/

@@ -3,6 +3,8 @@
   <head>
     <title>FormFormForm</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
   </head>
 
   <body>
@@ -30,27 +32,29 @@
 
     <div id="wrapper">
       <header>
-        <div id="title">
-          <h1><a href="#" class= "backwards">FORM</a><a href="#" class="flip">FORM</a><a href="#" class="upside">FORM</a></h1>
+        <div id="headerFlex">
+          <div id="title">
+            <h1><a href="#" class= "backwards">FORM</a><a href="#" class="flip">FORM</a><a href="#" class="upside">FORM</a></h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Index</a></li>
+              <li><a href="#">Archive</a></li>
+              <li class="info">Info</li>
+              <li class="info" style="display:none">Close &#215;</li>
+            </ul>
+          </nav>
         </div>
-        <nav>
-          <ul>
-            <li><a href="index.html" class="underline">Index</a></li>
-            <li><a href="#">Archive</a></li>
-            <li class="info"><a href="#" >Info</a></li>
-            <li class="info" style="display:none"><a href="#" >Close &#215;</a></li>
-          </ul>
-        </nav>
       </header>
 
       <div class="projectDetails">
         <div class="projectTitle">
           <div class="projectText">
             Bill Byron Wines
-              <ul>
-                <li><a href="#">Identity,</a></li>
-                <li><a href="#">Print,</a></li>
-                <li><a href="#">Digital</a></li>
+              <ul class="disciplines">
+                <li data-scroll="identity">Identity,</li>
+                <li data-scroll="print">Print,</li>
+                <li data-scroll="digital">Digital</li>
               </ul>
               &#8212;2013
           </div>
@@ -60,34 +64,57 @@
         </div>
       </div>
 
-      <div class="image_layout">
-        <div class="full-image">
+      <div class="sideDisciplines">
+        <ul class="disciplines">
+          <li data-scroll="identity">Identity,</li>
+          <li data-scroll="print">Print,</li>
+          <li data-scroll="digital">Digital</li>
+        </ul>
+      </div>
+
+      <div class="image_layout" data-anchor="identity">
+        <div class="full-image digital-image" >
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="big-image">
+        <div class="big-image digital-image">
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="left-image">
+        <div class="left-image digital-image" >
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="right-image">
+        <div class="right-image digital-image">
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="right-image">
+        <div class="right-image digital-image">
           <img src="images/bbSuite.jpg" />
         </div>
       </div>
-      <div class="image_layout">
-        <div class="full-image">
+      <div class="image_layout" data-anchor="print">
+        <div class="full-image" >
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="right-image">
+        <div class="right-image" >
           <img src="images/bbSuite.jpg" />
         </div>
         <div class="big-image">
           <img src="images/bbSuite.jpg" />
         </div>
-        <div class="left-image">
+        <div class="left-image" >
+          <img src="images/bbSuite.jpg" />
+        </div>
+      </div>
+
+      <div class="image_layout" data-anchor="digital">
+        <div class="full-image" >
+          <img src="images/bbSuite.jpg" />
+        </div>
+        <div class="right-image" >
+          <img src="images/bbSuite.jpg" />
+        </div>
+        <div class="big-image">
+          <img src="images/bbSuite.jpg" />
+        </div>
+        <div class="left-image" >
           <img src="images/bbSuite.jpg" />
         </div>
       </div>
@@ -113,85 +140,108 @@
         </div>
       </div>
 
-      <div class="relatedProjects">
+    <div class="relatedProjects">
         <h3><span class="fixed">Related projects</span></h3>
-        <div class="projectSlider">
+        <div class="projectSlider owl-carousel">
 
           <div class="projectTile">
+            <div class="projectTextOverlay">
+                <a href="#">AGI Open</a>
+                  <ul>
+                    <li><a href="#">Digital,</a></li>
+                    <li><a href="#">Motion,</a></li>
+                    <li><a href="#">Print</a></li>
+                  </ul>
+                  &#8212;2013
+            </div>
             <div class="projectThumb ">
-              <a href="#"><img src="images/bbSuite.jpg" /></a>
-            </div>
-            <div class="projectText">
-              <a href="#">AGI Open</a>
-                <ul>
-                  <li><a href="#">Digital,</a></li>
-                  <li><a href="#">Motion,</a></li>
-                  <li><a href="#">Print</a></li>
-                </ul>
-                &#8212;2013
+              <img src="images/bbSuite.jpg" />
             </div>
           </div>
+
           <div class="projectTile">
-            <div class="projectThumb">
-              <a href="#"><img src="images/bbSuite.jpg" /></a>
+            <div class="projectTextOverlay">
+                <a href="#">AGI Open</a>
+                  <ul>
+                    <li><a href="#">Digital,</a></li>
+                    <li><a href="#">Motion,</a></li>
+                    <li><a href="#">Print</a></li>
+                  </ul>
+                  &#8212;2013
             </div>
-            <div class="projectText">
-              <a href="#">AGI Open</a>
-                <ul>
-                  <li><a href="#">Digital,</a></li>
-                  <li><a href="#">Motion,</a></li>
-                  <li><a href="#">Print</a></li>
-                </ul>
-                &#8212;2013
+            <div class="projectThumb ">
+              <img src="images/bbSuite.jpg" />
             </div>
           </div>
+
           <div class="projectTile">
-            <div class="projectThumb">
-              <a href="#"><img src="images/bbSuite.jpg" /></a>
+            <div class="projectTextOverlay">
+                <a href="#">AGI Open</a>
+                  <ul>
+                    <li><a href="#">Digital,</a></li>
+                    <li><a href="#">Motion,</a></li>
+                    <li><a href="#">Print</a></li>
+                  </ul>
+                  &#8212;2013
             </div>
-            <div class="projectText">
-              <a href="#">AGI Open</a>
-                <ul>
-                  <li><a href="#">Digital,</a></li>
-                  <li><a href="#">Motion,</a></li>
-                  <li><a href="#">Print</a></li>
-                </ul>
-                &#8212;2013
+            <div class="projectThumb ">
+              <img src="images/bbSuite.jpg" />
             </div>
           </div>
+
           <div class="projectTile">
-            <div class="projectThumb">
-              <a href="#"><img src="images/bbSuite.jpg" /></a>
+            <div class="projectTextOverlay">
+                <a href="#">AGI Open</a>
+                  <ul>
+                    <li><a href="#">Digital,</a></li>
+                    <li><a href="#">Motion,</a></li>
+                    <li><a href="#">Print</a></li>
+                  </ul>
+                  &#8212;2013
             </div>
-            <div class="projectText">
-              <a href="#">AGI Open</a>
-                <ul>
-                  <li><a href="#">Digital,</a></li>
-                  <li><a href="#">Motion,</a></li>
-                  <li><a href="#">Print</a></li>
-                </ul>
-                &#8212;2013
+            <div class="projectThumb ">
+              <img src="images/bbSuite.jpg" />
             </div>
           </div>
+
           <div class="projectTile">
-            <div class="projectThumb">
-              <a href="#"><img src="images/bbSuite.jpg" /></a>
+            <div class="projectTextOverlay">
+                <a href="#">AGI Open</a>
+                  <ul>
+                    <li><a href="#">Digital,</a></li>
+                    <li><a href="#">Motion,</a></li>
+                    <li><a href="#">Print</a></li>
+                  </ul>
+                  &#8212;2013
             </div>
-            <div class="projectText">
-              <a href="#">AGI Open</a>
-                <ul>
-                  <li><a href="#">Digital,</a></li>
-                  <li><a href="#">Motion,</a></li>
-                  <li><a href="#">Print</a></li>
-                </ul>
-                &#8212;2013
+            <div class="projectThumb ">
+              <img src="images/bbSuite.jpg" />
             </div>
           </div>
 
         </div>
       </div>
 
-
+    <!--  <div class="related">
+          <h3><span class="fixed">Related projects</span></h3>
+          <div class="Slider owl-carousel">
+            <div>
+              <img src="images/bbSuite.jpg" />
+            </div>
+            <div>
+              <img src="images/bbSuite.jpg" />
+            </div>
+            <div>
+              <img src="images/bbSuite.jpg" />
+            </div>
+            <div>
+              <img src="images/bbSuite.jpg" />
+            </div>
+            <div>
+              <img src="images/bbSuite.jpg" />
+            </div>
+          </div>
+      </div> -->
 
       <footer>
         <div id="toTop">
@@ -205,7 +255,9 @@
         </div>
       </footer>
     </div>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scroll-up-bar.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/owl.carousel.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>

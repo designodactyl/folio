@@ -1,21 +1,38 @@
 @charset "UTF-8";
 /* — - - - IMPORTS HERE — - - -  */
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 * {
   box-sizing: border-box; }
 
@@ -66,6 +83,8 @@ a {
 button {
   overflow: visible;
   border: 0;
+  padding: 0;
+  margin: 0;
   font: inherit;
   -webkit-font-smoothing: inherit;
   letter-spacing: inherit;
@@ -82,7 +101,8 @@ button {
 img {
   max-width: 100%;
   height: auto;
-  border: 0; }
+  border: 0;
+  vertical-align: middle; }
 
 /* — - - - BASE STYLES HERE — - - -  */
 html {
@@ -91,19 +111,26 @@ html {
 body {
   font-size: 2rem;
   line-height: 2.5rem;
-  font-family: helvetica;
-  background: #000;
-  color: #f0f0f0; }
+  font-family: "Univers55",  helvetica;
+  background: #f0f0f0;
+  color: #191919; }
 
-.underline {
-  border-bottom: 1px solid; }
+@font-face {
+  font-family: 'Univers55';
+  src: url("../font/UniversLTStd.eot");
+  src: url("../font/UniversLTStd?#iefix") format("embedded-opentype"), url("../font/UniversLTStd.woff") format("woff"), url("../font/UniversLTStd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: none; }
 
 #wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-  /* — — — to hide image overflow on hove  - - - */ }
+  /* — — — to hide image overflow on hover  - - - */ }
+
+.underline {
+  border-bottom: 1px solid; }
 
 ::-moz-selection {
   color: #000;
@@ -121,53 +148,73 @@ img::selection {
   color: #000;
   background-color: rgba(255, 255, 255, 0.7); }
 
-img {
-  -webkit-filter: grayscale(100%);
+/* -img {
   filter: grayscale(100%);
-  vertical-align: middle; }
-
+} - */
 p {
   text-indent: 6rem; }
 
 /* — - - - GLOBAL BLACK CHANGES  HERE — - - -  */
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - NAV STYLES HERE — - - -  */
-header {
-  display: flex;
+#header {
   padding: 2rem 4rem 0 4rem;
-  z-index: 100; }
+  z-index: 100;
+  position: absolute;
+  width: 100%; }
 
-#title {
+#headerFlex {
+  display: flex;
+  flex-direction: row; }
+
+#formTitle {
   flex: 0  50%; }
 
-nav {
+#navigation {
   flex: 0  50%; }
 
-nav ul {
+#navigation ul {
   display: flex; }
 
-nav li {
+#navigation li {
   flex: 1; }
 
 .black {
   transition-delay: 0.2s;
   transition: 0.2s;
-  color: #000; }
+  color: #f0f0f0; }
 
 a:hover.upside {
   display: inline-block;
@@ -188,21 +235,121 @@ a:hover.flip {
   direction: rtl; }
 
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
+/* — - - - NAV STYLES HERE — - - -  */
+header {
+  padding: 2rem 4rem 0 4rem;
+  z-index: 100;
+  position: absolute;
+  width: 100%; }
+
+#headerFlex {
+  display: flex;
+  flex-direction: row; }
+
+#title {
+  flex: 0  50%; }
+
+nav {
+  flex: 0  50%; }
+
+nav ul {
+  display: flex; }
+
+nav li {
+  flex: 1;
+  cursor: pointer; }
+
+.black {
+  transition-delay: 0.2s;
+  transition: 0.2s;
+  color: #f0f0f0; }
+
+.black a:hover {
+  border-bottom: 1px solid #f0f0f0; }
+
+a:hover.upside {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+a:hover.backwards {
+  display: inline-block;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg); }
+
+a:hover.flip {
+  unicode-bidi: bidi-override;
+  direction: rtl; }
+
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
+*/
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - INTRO AND DETAILS  LAYOUT FOR PROJECT PAGE COPY HERE — - - -  */
 .projectDetails {
   display: flex;
@@ -219,7 +366,10 @@ $white: blue !global;
 .projectAppendix {
   display: flex;
   flex-direction: row-reverse;
-  margin: -6rem 4rem 10rem 4rem; }
+  padding: 2rem 4rem 10rem 4rem;
+  margin-top: -6rem;
+  background: #f0f0f0;
+  z-index: 1; }
 
 .details {
   display: flex;
@@ -234,33 +384,52 @@ $white: blue !global;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0 4rem 6rem 4rem; }
+  padding: 0 4rem 6rem 4rem;
+  background: #f0f0f0;
+  z-index: 1; }
 
 .next, .previous {
   flex: 0 0 50%; }
 
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 #bio {
   height: 100vh;
   width: calc(50vw + 3rem);
   position: fixed;
   z-index: 50;
-  background: #f0f0f0;
+  background: #191919;
   float: right;
   padding: 14.25rem 4rem 3rem 4rem;
   transition: 0.3s; }
@@ -270,10 +439,6 @@ $white: blue !global;
 
 .open {
   right: 0; }
-
-.intro {
-  margin-bottom: 6rem;
-  padding-right: 4rem; }
 
 .cv {
   display: flex;
@@ -299,21 +464,38 @@ $white: blue !global;
   margin-bottom: 2rem; }
 
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - INTRO STYLES FOR HOMEPAGE HERE — - - -  */
 section {
   display: flex;
@@ -326,13 +508,14 @@ section {
 .intro {
   flex: 1;
   margin-bottom: 6rem;
-  padding-right: 2rem; }
+  padding-right: 4rem; }
 
 /* — - - - PROJECTS STYLES HERE — - - -  */
 main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  position: relative; }
 
 .project {
   display: flex;
@@ -345,7 +528,8 @@ main {
   /*padding: 3rem 1rem 3rem 1rem;*/
   min-width: 20rem;
   min-height: 17.5rem;
-  position: relative; }
+  position: relative;
+  transition: opacity .2s ease-in-out; }
 
 .projectImage {
   position: absolute;
@@ -353,7 +537,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: -10; }
 
 .projectImage img {
   position: fixed;
@@ -364,65 +549,107 @@ main {
   transition: opacity .15s ease-in-out;
   opacity: 0; }
 
-/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
-.active:hover {
-  cursor: pointer; }
-
-.active:hover > .projectImage img:nth-child(1) {
-  display: block;
-  opacity: 1; }
-
-.active:hover > .projectText, .project:hover {
-  z-index: 10; }
-
-/* — - - - PROJECTS IMAGES STYLES HERE — - - -
-.project img {
-  display: inline;
-  position: absolute;
-  width: 50vw;
-  z-index: -1;
-}
-
-/* —
-.project:hover > img {
-  display: inline;
-  cursor: pointer;
-}
-
-.project:hover {
-  z-index: 1 !important;
-}
-
- */
-/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
 .projectText li {
   display: inline;
   font-style: italic; }
 
+/* — - - - PROJECTS HOVER STYLES HERE — - - -  */
+.active:hover {
+  cursor: pointer; }
+
+li.image_holder {
+  position: absolute;
+  width: 40vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: -10; }
+
+li.image_holder img {
+  position: fixed;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  opacity: 0; }
+
+.projectText li:hover + li.image_holder img {
+  visibility: visible;
+  opacity: 1; }
+
+.project.dimmed .projectText li:hover + li.image_holder img {
+  display: none;
+  opacity: 0; }
+
+/*.active:hover > .projectImage img:nth-child(1) {
+  visibility: visible;
+  opacity: 1;
+}*/
+.projectText:hover + .projectImage img {
+  opacity: 1; }
+
+.active > .projectText, .project:hover {
+  z-index: 1; }
+
+.dimmed:hover {
+  cursor: default; }
+
+.dimmed a:hover {
+  cursor: default;
+  border: none; }
+
+.dimmed:hover > .projectImage img:nth-child(1) {
+  display: none;
+  cursor: default; }
+
 .dimmed {
-  opacity: 0.2; }
+  opacity: 0.1; }
+
+.dimmed img {
+  display: none;
+  visibility: hidden; }
 
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - FILTER STYLES HERE — - - -  */
 #filters {
   display: flex;
   flex-wrap: wrap;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  z-index: 1; }
 
 #sort {
   width: 32.5%; }
@@ -467,24 +694,41 @@ $white: blue !global;
 .show {
   opacity: 1;
   transform: translateY(0%);
-  z-index: 0; }
+  z-index: 2; }
 
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
 .image_layout {
   display: flex;
@@ -510,86 +754,229 @@ $white: blue !global;
 
 .left-image,
 .right-image {
-  flex: 0 50%;
+  flex: 0 calc(50% - 5rem);
   min-width: 300px;
   margin-bottom: 2rem; }
 
 .left-image {
-  padding: 0 1rem 0 4rem; }
+  margin: 0 1rem 2rem 4rem; }
 
 .right-image {
-  padding: 0 4rem 0 1rem;
+  margin: 0 4rem 2rem 1rem;
   margin-left: auto; }
 
+/* — - - - DIGITAL IMAGES WITH DROP SHADOW STYLING — - - -  */
+.digital-image {
+  background: #c8c8c8;
+  padding: 5%; }
+
+.digital-image img {
+  box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.5); }
+
+/* — - - - SIDE DISCIPLINES NAV — - - -  */
+.sideDisciplines {
+  position: fixed;
+  right: -220px;
+  /* –– 1/2 width -some space on the side -  */
+  top: 50vh;
+  height: 20px;
+  width: 400px;
+  text-align: center;
+  font-style: italic;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transition: .2s ease-in-out; }
+
+.sideDisciplines li {
+  display: inline-block; }
+
+.disciplines li:hover {
+  border-bottom: 1px solid #191919;
+  cursor: pointer; }
+
+.appear {
+  right: -160px; }
+
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 .relatedProjects {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0 6rem 4rem;
-  background: #f0f0f0;
-  color: #000;
-  overflow-x: auto; }
+  padding: 2rem 0 6rem 0;
+  background: #191919;
+  color: #f0f0f0; }
 
 .relatedProjects h3 {
-  flex: 1;
-  margin-bottom: 4rem; }
+  margin-bottom: 5rem;
+  padding-left: 4rem; }
 
 .projectSlider {
-  flex: 1;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
 
 .projectTile {
-  flex: 1 0 25%;
-  margin-left: 2rem; }
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2rem;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+.projectTile:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing; }
 
 .projectTile:nth-of-type(1) {
   margin-left: 0rem; }
 
 .projectThumb {
-  margin-bottom: 2rem; }
+  margin-bottom: 0rem; }
+
+.projectTextOverlay {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #f0f0f0;
+  color: #191919;
+  transform: translateY(0);
+  transition: .2s ease-in-out;
+  opacity: 0; }
+
+.projectTile:hover > .projectTextOverlay {
+  transform: translateY(0);
+  opacity: 1; }
+
+.projectTextOverlay li {
+  display: inline;
+  font-style: italic; }
 
 .fixed {
   position: absolute; }
 
+/* — - - - CUSTOM OWL SLIDER STYLES HERE — - - -  */
+.owl-next, .owl-prev {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 5%;
+  background: #191919;
+  opacity: 0;
+  transition: .2s ease-in-out;
+  /* — - - - FIX FOR BLURRY ROTATED TEXT IN CHROME — - - -  */
+  -webkit-transform: translateZ(0) scale(1, 1); }
+
+.owl-prev div {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg); }
+
+.owl-next div {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg); }
+
+.owl-next {
+  right: 0; }
+
+.owl-next.disabled {
+  transform: translateX(100%); }
+
+.owl-next.disabled:hover {
+  transform: translateX(100%); }
+
+.owl-prev.disabled {
+  transform: translateX(-100%); }
+
+.owl-prev.disabled:hover {
+  transform: translateX(-100%); }
+
+.owl-next:hover, .owl-prev:hover {
+  opacity: 1; }
+
 /* — - - - VARIABLES ARE HERE — - - -  */
-/* COOL CCOLOR MIXES HERE
-$black: pink !global;
-$white: blue !global;
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
 */
-/* —  DODGY FONT DONT USE, RMEMEBR TO SWAP FOR LEGIT VERSION
-@font-face {
-	font-family: 'Univers56';
-	src: url('../font/UniversBQ-Italic.eot');
-	src: url('../font/UniversBQ-Italic.eot?#iefix') format('embedded-opentype'),
-		url('../font/UniversBQ-Italic.woff') format('woff'),
-		url('../font/UniversBQ-Italic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: italic;
-}
--  */
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
 /* — - - - FOOTER STYLES HERE — - - -  */
 footer {
   display: flex;
   flex: 1;
   align-items: flex-end;
-  padding: 16rem 4rem 4rem 4rem; }
+  padding: 16rem 4rem 4rem 4rem;
+  background: #f0f0f0; }
 
 #footerContact {
   flex-basis: 50%;

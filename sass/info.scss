@@ -19,7 +19,10 @@
 .projectAppendix {
   display: flex;
   flex-direction: row-reverse;
-  margin: -6rem $page-spacer 10rem $page-spacer;
+  padding: 2rem $page-spacer 10rem $page-spacer;
+  margin-top: -6rem;
+  background: $primary-color;
+  z-index: 1;
 }
 
 .details {
@@ -37,7 +40,9 @@
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  margin: 0 $page-spacer 6rem $page-spacer;
+  padding: 0 $page-spacer 6rem $page-spacer;
+  background: $primary-color;
+  z-index: 1;
 }
 
 .next, .previous{

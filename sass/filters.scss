@@ -7,6 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-right: $spacer;
+  z-index: 1;
 }
 
 #sort {
@@ -61,6 +62,6 @@
 .show {
   opacity: 1;
   transform: translateY(0%);
-  z-index: 0;
+  z-index: 2;
 
 }
