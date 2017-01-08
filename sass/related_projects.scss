@@ -15,8 +15,8 @@
 
 .projectSlider {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
+
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
@@ -27,15 +27,16 @@
   justify-content: center;
   flex-direction: column;
   margin-left: 2rem;
+
   cursor: grab;
   cursor: -moz-grab;
   cursor: -webkit-grab;
 }
 
 .projectTile:active {
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
 }
 
 .projectTile:nth-of-type(1) {
@@ -51,6 +52,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -68,7 +70,6 @@
   opacity: 1;
 }
 
-
 .projectTextOverlay li {
   display: inline;
   font-style: italic;
@@ -78,7 +79,20 @@
   position: absolute;
 }
 
+.sticky {
+  position: fixed;
+  left:0;
+  bottom:0;
+  z-index: -1;
+  width: 100vw;
+}
+
 /* — - - - CUSTOM OWL SLIDER STYLES HERE — - - -  */
+
+.owl-stage {
+  display: flex;
+  align-items: flex-end;
+}
 
 .owl-next, .owl-prev {
   display: flex;
@@ -98,6 +112,14 @@
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
+.owl-next, .owl-prev {
+  cursor: pointer;
+}
+
+.owl-next {
+  right:0;
+}
+
 .owl-prev div {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -108,9 +130,6 @@
   -moz-transform: rotate(90deg);
 }
 
-.owl-next {
-  right:0;
-}
 
 .owl-next.disabled {
   transform: translateX(100%);

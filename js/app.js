@@ -85,7 +85,7 @@ $(document).ready(function() {
     }
 
     /* setup sort attributes */
-    $('#date').data("sortKey", "span.date");
+    $('#date').data("sortKey", "li.date");
 
     function sortDates() {
         sortUsingNestedDate($('#projectIndex'), "div", $("button.btnSortDate").data("sortKey"));
@@ -122,7 +122,7 @@ $(document).ready(function() {
         parent.append(items);
     }
     /* setup sort attributes */
-    $('#name').data("sortKey", "span.name");
+    $('#name').data("sortKey", "li.name");
 
     /* The actual Sorting function itself */
     function sortNames() {

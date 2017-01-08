@@ -1,51 +1,47 @@
-
 @import '_variables';
-
 /* — - - - INTRO STYLES FOR HOMEPAGE HERE — - - -  */
-
 section {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: auto;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 .intro {
-  flex: 1;
-  margin-bottom: 6rem;
-  padding-right: $page-spacer;
+    flex: 1;
+    margin-bottom: 6rem;
+    padding-right: $page-spacer;
 }
-
-
-
 /* — - - - PROJECTS STYLES HERE — - - -  */
-
 main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  position: relative ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
 }
 
-.project{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
-  flex:0 calc(25% - 8rem);
-  text-align: center;
-  margin: 0 $page-spacer 2rem $page-spacer;
-  /*padding: 3rem 1rem 3rem 1rem;*/
-  min-width: 20rem;
-  min-height: 17.5rem;
-  position: relative;
-
-  transition: opacity .2s ease-in-out;
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 calc(25% - 8rem);
+    text-align: center;
+    margin: 0 $page-spacer 2rem;
+    /*padding: 3rem 1rem 3rem 1rem;*/
+    min-width: 20rem;
+    min-height: 17.5rem;
+    position: relative;
+    z-index: 0;
 }
 
+.name, .date {
+  font-style: normal;
+}
+
+/*
 .projectImage {
   position: absolute;
   width: 40vw;
@@ -65,84 +61,90 @@ main {
   transition: opacity .15s ease-in-out;
   opacity: 0;
 }
-
-.projectText li {
-  display: inline;
-  font-style: italic;
+*/
+.projectText ul {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-style: italic;
 }
 
+.projectText li {
+    padding-right: 5px;
+}
+
+.projectText li.date,
+.projectText li.name {
+    flex: 2 100%;
+}
+
+.projectDisipline::after {
+    content: ",";
+}
+
+.projectText li:nth-last-child(3)::after {
+    content: "";
+}
 /* — - - - PROJECTS HOVER STYLES HERE — - - -  */
 .active:hover {
     cursor: pointer;
 }
 
-
-
-li.image_holder  {
-  position: absolute;
-  width: 40vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: -10;
+li.image_holder {
+    position: absolute;
+    width: 40vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: -10;
 }
 
 li.image_holder img {
-  position: fixed;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity .15s ease-in-out;
-  opacity: 0;
+    position: fixed;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*transition: opacity 0.15s ease-in;*/
+    opacity: 0;
 }
 
 .projectText li:hover + li.image_holder img {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
 }
 
 .project.dimmed .projectText li:hover + li.image_holder img {
-  display: none;
-  opacity: 0;
+    display: none;
+    opacity: 0;
 }
-
-
 /*.active:hover > .projectImage img:nth-child(1) {
   visibility: visible;
   opacity: 1;
 }*/
-
-
-.projectText:hover + .projectImage img{
-  opacity: 1;
+.active > .projectText,
+.project:hover {
+    z-index: 1;
 }
 
-
-.active > .projectText, .project:hover {
-  z-index: 1;
-}
-
+.dimmed a:hover,
 .dimmed:hover {
-  cursor: default;
-}
-
-.dimmed a:hover {
-  cursor: default;
-  border: none;
+    cursor: default;
+    border: none;
 }
 
 .dimmed:hover > .projectImage img:nth-child(1) {
-  display: none;
-  cursor: default;
+    display: none;
+    cursor: default;
 }
 
 .dimmed {
-  opacity: 0.1;
+    opacity: 0.1;
 }
 
 .dimmed img {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 }

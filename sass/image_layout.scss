@@ -1,9 +1,10 @@
 @import '_variables';
+@import '_mixins';
 
 /* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
 
 .image_layout {
-  display: flex;
+  @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 12rem;
@@ -19,36 +20,52 @@
 .big-image img,
 .left-image img,
 .right-image img {
-  width: 100%
+  width: 100%;
 }
 
 .big-image {
-  flex: 0 0 100%;
-  padding: 0 $page-spacer 0 $page-spacer;
+  flex: 0 100%;
+  margin: 0 $page-spacer 0 $page-spacer;
   margin-bottom: $spacer;
 }
 
 .left-image,
-.right-image  {
+.right-image,
+.left-image-solo,
+.right-image-solo {
   flex: 0 calc(50% - 5rem);
   min-width: 300px;
   margin-bottom: $spacer;
+  z-index: 1000;
 }
 
-.left-image {
-  margin: 0 1rem $spacer $page-spacer;
+.left-image,
+.left-image-solo {
+  margin: 0 2rem $spacer $page-spacer;
+}
+
+.right-image,
+.right-image-solo {
+  margin: 0 $page-spacer $spacer 0rem;
 }
 
 .right-image {
-  margin: 0 $page-spacer $spacer 1rem;
   margin-left: auto;
+}
+
+.left-image-solo {
+  margin-right: calc(50% + 1rem);
+}
+
+.right-image-solo {
+  margin-left: calc(50% + 1rem);
 }
 
 /* — - - - DIGITAL IMAGES WITH DROP SHADOW STYLING — - - -  */
 
 .digital-image {
   background: rgb(200, 200, 200);
-  padding: 5%;
+  padding: 4vw;
 }
 
 .digital-image img{
@@ -77,10 +94,9 @@
 }
 
 .disciplines li:hover {
-  border-bottom: 1px solid $secondary-color;
   cursor: pointer;
 }
 
 .appear {
-  right: -160px
+  right: -180px
 }

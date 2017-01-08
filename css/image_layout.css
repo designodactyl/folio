@@ -34,6 +34,10 @@ $secondary-color: White;
 */
 /* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
 .image_layout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -51,27 +55,40 @@ $secondary-color: White;
   width: 100%; }
 
 .big-image {
-  flex: 0 0 100%;
-  padding: 0 4rem 0 4rem;
+  flex: 0 100%;
+  margin: 0 4rem 0 4rem;
   margin-bottom: 2rem; }
 
 .left-image,
-.right-image {
+.right-image,
+.left-image-solo,
+.right-image-solo {
   flex: 0 calc(50% - 5rem);
   min-width: 300px;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  z-index: 1000; }
 
-.left-image {
-  margin: 0 1rem 2rem 4rem; }
+.left-image,
+.left-image-solo {
+  margin: 0 2rem 2rem 4rem; }
+
+.right-image,
+.right-image-solo {
+  margin: 0 4rem 2rem 0rem; }
 
 .right-image {
-  margin: 0 4rem 2rem 1rem;
   margin-left: auto; }
+
+.left-image-solo {
+  margin-right: calc(50% + 1rem); }
+
+.right-image-solo {
+  margin-left: calc(50% + 1rem); }
 
 /* — - - - DIGITAL IMAGES WITH DROP SHADOW STYLING — - - -  */
 .digital-image {
   background: #c8c8c8;
-  padding: 5%; }
+  padding: 4vw; }
 
 .digital-image img {
   box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.5); }
@@ -94,8 +111,7 @@ $secondary-color: White;
   display: inline-block; }
 
 .disciplines li:hover {
-  border-bottom: 1px solid #191919;
   cursor: pointer; }
 
 .appear {
-  right: -160px; }
+  right: -180px; }

@@ -41,15 +41,18 @@
 }
 
 #disiplineFilters ul {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   flex: 2;
   margin: 1rem 0 0 32.5%;
 }
 
 #disiplineFilters li {
-  flex: 0;
   padding-right: 5px;
+}
+
+#disiplineFilters li:last-child {
+  padding-right: 0px;
 }
 
 .hide {

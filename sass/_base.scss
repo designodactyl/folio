@@ -1,4 +1,13 @@
  /* — - - - BASE STYLES HERE — - - -  */
+ @font-face {
+ 	font-family: 'Univers55';
+ 	src: url('../font/UniversLTStd.eot');
+ 	src: url('../font/UniversLTStd?#iefix') format('embedded-opentype'),
+ 		url('../font/UniversLTStd.woff') format('woff'),
+ 		url('../font/UniversLTStd.ttf') format('truetype');
+ 	font-weight: normal;
+ 	font-style: none;
+ }
 
 html {
     font-size: 62.5%;
@@ -10,16 +19,6 @@ body {
   font-family: "Univers55",  helvetica;
   background: $primary-color;
   color: $secondary-color;
-}
-
-@font-face {
-	font-family: 'Univers55';
-	src: url('../font/UniversLTStd.eot');
-	src: url('../font/UniversLTStd?#iefix') format('embedded-opentype'),
-		url('../font/UniversLTStd.woff') format('woff'),
-		url('../font/UniversLTStd.ttf') format('truetype');
-	font-weight: normal;
-	font-style: none;
 }
 
 #wrapper {
@@ -52,10 +51,10 @@ img::selection {
   background-color: rgba(255,255,255,.7);
 }
 
-/* -img {
-  filter: grayscale(100%);
-} - */
-
 p {
   text-indent: 6rem;
+}
+
+a:hover, li a:hover, button:hover {
+  cursor: pointer;
 }
