@@ -15,7 +15,7 @@ section {
     padding-right: $page-spacer;
 }
 /* — - - - PROJECTS STYLES HERE — - - -  */
-main {
+#projectIndex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -41,27 +41,6 @@ main {
   font-style: normal;
 }
 
-/*
-.projectImage {
-  position: absolute;
-  width: 40vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: -10;
-}
-
-.projectImage img {
-  position: fixed;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity .15s ease-in-out;
-  opacity: 0;
-}
-*/
 .projectText ul {
     display: inline-flex;
     justify-content: center;

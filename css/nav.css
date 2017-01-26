@@ -3,10 +3,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -59,10 +61,10 @@ nav li {
 .black {
   transition-delay: 0.2s;
   transition: 0.2s;
-  color: #f0f0f0; }
+  color: #141414; }
 
 .black a:hover {
-  border-bottom: 1px solid #f0f0f0; }
+  border-bottom: 1px solid #141414; }
 
 a:hover.upside {
   display: inline-block;

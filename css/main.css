@@ -4,10 +4,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -112,6 +114,20 @@ img {
   font-weight: normal;
   font-style: none; }
 
+@font-face {
+  font-family: 'Univers63';
+  src: url("../font/UniversLTStd-BoldEx.eot");
+  src: url("../font/UniversLTStd-BoldEx.eot?#iefix") format("embedded-opentype"), url("../font/UniversLTStd-BoldEx.woff") format("woff"), url("../font/UniversLTStd-BoldEx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Univers63Outline';
+  src: url("../font/hinted-UniversLTStd-BoldEx.eot");
+  src: url("../font/hinted-UniversLTStd-BoldEx.eot?#iefix") format("embedded-opentype"), url("../font/hinted-UniversLTStd-BoldEx.woff") format("woff"), url("../font/hinted-UniversLTStd-BoldEx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
 html {
   font-size: 62.5%; }
 
@@ -119,8 +135,8 @@ body {
   font-size: 2rem;
   line-height: 2.5rem;
   font-family: "Univers55",  helvetica;
-  background: #f0f0f0;
-  color: #191919; }
+  background: #141414;
+  color: #f0f0f0; }
 
 #wrapper {
   display: flex;
@@ -159,10 +175,12 @@ a:hover, li a:hover, button:hover {
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -214,7 +232,7 @@ $secondary-color: White;
 .black {
   transition-delay: 0.2s;
   transition: 0.2s;
-  color: #f0f0f0; }
+  color: #141414; }
 
 a:hover.upside {
   display: inline-block;
@@ -238,10 +256,12 @@ a:hover.flip {
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -294,10 +314,10 @@ nav li {
 .black {
   transition-delay: 0.2s;
   transition: 0.2s;
-  color: #f0f0f0; }
+  color: #141414; }
 
 .black a:hover {
-  border-bottom: 1px solid #f0f0f0; }
+  border-bottom: 1px solid #141414; }
 
 a:hover.upside {
   display: inline-block;
@@ -321,10 +341,12 @@ a:hover.flip {
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -368,7 +390,7 @@ $secondary-color: White;
   flex-direction: row-reverse;
   padding: 2rem 4rem 10rem 4rem;
   margin-top: -6rem;
-  background: #f0f0f0;
+  background: #141414;
   z-index: 1; }
 
 .details {
@@ -385,7 +407,7 @@ $secondary-color: White;
   justify-content: flex-end;
   flex-wrap: wrap;
   padding: 0 4rem 6rem 4rem;
-  background: #f0f0f0;
+  background: #141414;
   z-index: 1; }
 
 .next, .previous {
@@ -395,10 +417,12 @@ $secondary-color: White;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -429,7 +453,7 @@ $secondary-color: White;
   width: calc(50vw + 3rem);
   position: fixed;
   z-index: 50;
-  background: #191919;
+  background: #f0f0f0;
   float: right;
   padding: 14.25rem 4rem 3rem 4rem;
   transition: 0.3s; }
@@ -467,10 +491,12 @@ $secondary-color: White;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -511,7 +537,7 @@ section {
   padding-right: 4rem; }
 
 /* — - - - PROJECTS STYLES HERE — - - -  */
-main {
+#projectIndex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -534,27 +560,6 @@ main {
 .name, .date {
   font-style: normal; }
 
-/*
-.projectImage {
-  position: absolute;
-  width: 40vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: -10;
-}
-
-.projectImage img {
-  position: fixed;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity .15s ease-in-out;
-  opacity: 0;
-}
-*/
 .projectText ul {
   display: inline-flex;
   justify-content: center;
@@ -633,10 +638,186 @@ li.image_holder img {
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
+*/
+/* PINK & BLUE
+$primary-color: Pink;
+$secondary-color: MidnightBlue;
+*/
+/* PINK & BLUE INVERSE
+$primary-color: MidnightBlue;
+$secondary-color: Pink;
+*/
+/* YELLOWORANGE & BLUE
+$primary-color: Orange;
+$secondary-color: MidnightBlue;
+*/
+/* TOMATO AND WHITE
+$primary-color: White;
+$secondary-color: Tomato;
+*/
+/* UBANK
+$primary-color: #008228;
+$secondary-color: White;
+*/
+/* MATTER
+$primary-color: rgb(0, 0, 145);
+$secondary-color: White;
+*/
+/* — - - - BASE STYLES HERE — - - -  */
+@font-face {
+  font-family: 'Univers55';
+  src: url("../font/UniversLTStd.eot");
+  src: url("../font/UniversLTStd?#iefix") format("embedded-opentype"), url("../font/UniversLTStd.woff") format("woff"), url("../font/UniversLTStd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: none; }
+
+@font-face {
+  font-family: 'Univers63';
+  src: url("../font/UniversLTStd-BoldEx.eot");
+  src: url("../font/UniversLTStd-BoldEx.eot?#iefix") format("embedded-opentype"), url("../font/UniversLTStd-BoldEx.woff") format("woff"), url("../font/UniversLTStd-BoldEx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Univers63Outline';
+  src: url("../font/hinted-UniversLTStd-BoldEx.eot");
+  src: url("../font/hinted-UniversLTStd-BoldEx.eot?#iefix") format("embedded-opentype"), url("../font/hinted-UniversLTStd-BoldEx.woff") format("woff"), url("../font/hinted-UniversLTStd-BoldEx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-family: "Univers55",  helvetica;
+  background: #141414;
+  color: #f0f0f0; }
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  /* — — — to hide image overflow on hover  - - - */ }
+
+.underline {
+  border-bottom: 1px solid; }
+
+::-moz-selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::-moz-selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+::selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.99); }
+
+img::selection {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.7); }
+
+p {
+  text-indent: 6rem; }
+
+a:hover, li a:hover, button:hover {
+  cursor: pointer; }
+
+/* — - - - PROJECTS BIG STYLES HERE — - - -  */
+#projectIndexBig {
+  /* display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative; */
+  margin: 0 4rem 0 4rem;
+  text-transform: uppercase;
+  font-family: 'Univers63';
+  font-size: 9rem;
+  line-height: 9rem;
+  hyphens: auto;
+  word-spacing: -1.5vw;
+  letter-spacing: -0.4rem;
+  text-align: justify; }
+
+.projectBig {
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0.9; }
+
+.projectBig:hover {
+  opacity: 1; }
+
+.projectBig::after {
+  content: '\00a0\2022';
+  font-family: 'Univers63Outline';
+  opacity: 0.85; }
+
+.projectImageBig {
+  display: none;
+  position: absolute;
+  width: 30vw;
+  z-index: 1; }
+
+.outline {
+  font-family: 'Univers63Outline'; }
+
+.outline:hover {
+  cursor: default;
+  opacity: 0.85; }
+
+.bigDate {
+  display: none;
+  font-size: 2.5rem;
+  word-spacing: -2.5rem; }
+
+/* — - - - PROJECTS HOVER STYLES HERE — - - -
+.projectImageBig {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: -1;
+}
+
+.projectImageBig img {
+  position: fixed;
+  display: block;
+  width: 60vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  opacity: 0;
+}
+
+
+
+.projectBig:hover + .projectImageBig img {
+    visibility: visible;
+    opacity: 1;
+} */
+/* — - - - VARIABLES ARE HERE — - - -  */
+/* NORMAL
+$primary-color: rgb(25, 25, 25);
+$secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
+*/
+/* INVERSE
+$primary-color: rgb(240, 240, 240);
+$secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -720,10 +901,12 @@ $secondary-color: White;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -758,32 +941,33 @@ $secondary-color: White;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+  align-items: flex-start; }
 
 .full-image {
   flex: 0 0 100vw;
   width: 100vw;
   margin-bottom: 4rem; }
 
-.full-image img,
 .big-image img,
+.full-image img,
 .left-image img,
-.right-image img {
+.left-image-solo img,
+.right-image img,
+.right-image-solo img {
   width: 100%; }
 
 .big-image {
   flex: 0 100%;
-  margin: 0 4rem 0 4rem;
-  margin-bottom: 2rem; }
+  margin: 0 4rem 2rem; }
 
 .left-image,
-.right-image,
 .left-image-solo,
+.right-image,
 .right-image-solo {
   flex: 0 calc(50% - 5rem);
   min-width: 300px;
-  margin-bottom: 2rem;
-  z-index: 1000; }
+  margin-bottom: 2rem; }
 
 .left-image,
 .left-image-solo {
@@ -791,7 +975,7 @@ $secondary-color: White;
 
 .right-image,
 .right-image-solo {
-  margin: 0 4rem 2rem 0rem; }
+  margin: 0 4rem 2rem 0; }
 
 .right-image {
   margin-left: auto; }
@@ -808,7 +992,7 @@ $secondary-color: White;
   padding: 4vw; }
 
 .digital-image img {
-  box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.5); }
 
 /* — - - - SIDE DISCIPLINES NAV — - - -  */
 .sideDisciplines {
@@ -822,7 +1006,7 @@ $secondary-color: White;
   font-style: italic;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-  transition: .2s ease-in-out; }
+  transition: 0.2s ease-in-out; }
 
 .sideDisciplines li {
   display: inline-block; }
@@ -837,10 +1021,12 @@ $secondary-color: White;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -870,8 +1056,8 @@ $secondary-color: White;
   display: flex;
   flex-direction: column;
   padding: 2rem 0 6rem 0;
-  background: #191919;
-  color: #f0f0f0; }
+  background: #f0f0f0;
+  color: #141414; }
 
 .relatedProjects h3 {
   margin-bottom: 5rem;
@@ -914,8 +1100,8 @@ $secondary-color: White;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: #f0f0f0;
-  color: #191919;
+  background: #141414;
+  color: #f0f0f0;
   transform: translateY(0);
   transition: .2s ease-in-out;
   opacity: 0; }
@@ -952,7 +1138,7 @@ $secondary-color: White;
   height: 100%;
   top: 0;
   width: 5%;
-  background: #191919;
+  background: #f0f0f0;
   opacity: 0;
   transition: .2s ease-in-out;
   /* — - - - FIX FOR BLURRY ROTATED TEXT IN CHROME — - - -  */
@@ -991,10 +1177,12 @@ $secondary-color: White;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -1026,7 +1214,7 @@ footer {
   flex: 1;
   align-items: flex-end;
   padding: 16rem 4rem 4rem 4rem;
-  background: #f0f0f0; }
+  background: #141414; }
 
 #footerContact {
   flex-basis: 50%;

@@ -3,10 +3,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;

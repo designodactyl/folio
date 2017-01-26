@@ -1,102 +1,97 @@
 @import '_variables';
 @import '_mixins';
-
 /* — - - - IMAGE LAYOUT FOR PROJECT PAGE HERE — - - -  */
-
 .image_layout {
-  @include flexbox();
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 12rem;
+    @include flexbox();
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 12rem;
+    align-items: flex-start;
 }
 
 .full-image {
-  flex: 0 0 100vw;
-  width: 100vw;
-  margin-bottom: 4rem;
+    flex: 0 0 100vw;
+    width: 100vw;
+    margin-bottom: 4rem;
 }
 
-.full-image img,
 .big-image img,
+.full-image img,
 .left-image img,
-.right-image img {
-  width: 100%;
+.left-image-solo img,
+.right-image img,
+.right-image-solo img {
+    width: 100%;
 }
 
 .big-image {
-  flex: 0 100%;
-  margin: 0 $page-spacer 0 $page-spacer;
-  margin-bottom: $spacer;
+    flex: 0 100%;
+    margin: 0 $page-spacer $spacer;
 }
 
 .left-image,
-.right-image,
 .left-image-solo,
+.right-image,
 .right-image-solo {
-  flex: 0 calc(50% - 5rem);
-  min-width: 300px;
-  margin-bottom: $spacer;
-  z-index: 1000;
+    flex: 0 calc(50% - 5rem);
+    min-width: 300px;
+    margin-bottom: $spacer;
 }
 
 .left-image,
 .left-image-solo {
-  margin: 0 2rem $spacer $page-spacer;
+    margin: 0 2rem $spacer $page-spacer;
 }
 
 .right-image,
 .right-image-solo {
-  margin: 0 $page-spacer $spacer 0rem;
+    margin: 0 $page-spacer $spacer 0;
 }
 
 .right-image {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .left-image-solo {
-  margin-right: calc(50% + 1rem);
+    margin-right: calc(50% + 1rem);
 }
 
 .right-image-solo {
-  margin-left: calc(50% + 1rem);
+    margin-left: calc(50% + 1rem);
 }
-
 /* — - - - DIGITAL IMAGES WITH DROP SHADOW STYLING — - - -  */
-
 .digital-image {
-  background: rgb(200, 200, 200);
-  padding: 4vw;
+    background: $tertiary-color;
+    padding: 4vw;
 }
 
-.digital-image img{
-  box-shadow: 0px 5px 50px -10px rgba(0,0,0,0.5);
+.digital-image img {
+    box-shadow: 0 5px 50px -10px rgba(0,0,0,0.5);
 }
-
 
 /* — - - - SIDE DISCIPLINES NAV — - - -  */
-
 .sideDisciplines {
-  position: fixed;
-  right: -220px; /* –– 1/2 width -some space on the side -  */
-  top: 50vh;
-  height: 20px;
-  width: 400px;
-  text-align: center;
-  font-style: italic;
-
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  transition: .2s ease-in-out;
+    position: fixed;
+    right: -220px;
+    /* –– 1/2 width -some space on the side -  */
+    top: 50vh;
+    height: 20px;
+    width: 400px;
+    text-align: center;
+    font-style: italic;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
 }
 
 .sideDisciplines li {
-  display: inline-block;
+    display: inline-block;
 }
 
 .disciplines li:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .appear {
-  right: -180px
+    right: -180px;
 }

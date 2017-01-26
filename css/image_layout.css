@@ -3,10 +3,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -41,32 +43,33 @@ $secondary-color: White;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+  align-items: flex-start; }
 
 .full-image {
   flex: 0 0 100vw;
   width: 100vw;
   margin-bottom: 4rem; }
 
-.full-image img,
 .big-image img,
+.full-image img,
 .left-image img,
-.right-image img {
+.left-image-solo img,
+.right-image img,
+.right-image-solo img {
   width: 100%; }
 
 .big-image {
   flex: 0 100%;
-  margin: 0 4rem 0 4rem;
-  margin-bottom: 2rem; }
+  margin: 0 4rem 2rem; }
 
 .left-image,
-.right-image,
 .left-image-solo,
+.right-image,
 .right-image-solo {
   flex: 0 calc(50% - 5rem);
   min-width: 300px;
-  margin-bottom: 2rem;
-  z-index: 1000; }
+  margin-bottom: 2rem; }
 
 .left-image,
 .left-image-solo {
@@ -74,7 +77,7 @@ $secondary-color: White;
 
 .right-image,
 .right-image-solo {
-  margin: 0 4rem 2rem 0rem; }
+  margin: 0 4rem 2rem 0; }
 
 .right-image {
   margin-left: auto; }
@@ -91,7 +94,7 @@ $secondary-color: White;
   padding: 4vw; }
 
 .digital-image img {
-  box-shadow: 0px 5px 50px -10px rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 5px 50px -10px rgba(0, 0, 0, 0.5); }
 
 /* — - - - SIDE DISCIPLINES NAV — - - -  */
 .sideDisciplines {
@@ -105,7 +108,7 @@ $secondary-color: White;
   font-style: italic;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-  transition: .2s ease-in-out; }
+  transition: 0.2s ease-in-out; }
 
 .sideDisciplines li {
   display: inline-block; }

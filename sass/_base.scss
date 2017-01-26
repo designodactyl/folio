@@ -9,6 +9,27 @@
  	font-style: none;
  }
 
+ @font-face {
+ 	font-family: 'Univers63';
+ 	src: url('../font/UniversLTStd-BoldEx.eot');
+ 	src: url('../font/UniversLTStd-BoldEx.eot?#iefix') format('embedded-opentype'),
+ 		url('../font/UniversLTStd-BoldEx.woff') format('woff'),
+ 		url('../font/UniversLTStd-BoldEx.ttf') format('truetype');
+ 	font-weight: bold;
+ 	font-style: normal;
+ }
+
+ @font-face {
+   font-family: 'Univers63Outline';
+   src: url('../font/hinted-UniversLTStd-BoldEx.eot');
+  	src: url('../font/hinted-UniversLTStd-BoldEx.eot?#iefix') format('embedded-opentype'),
+  		url('../font/hinted-UniversLTStd-BoldEx.woff') format('woff'),
+  		url('../font/hinted-UniversLTStd-BoldEx.ttf') format('truetype');
+  	font-weight: bold;
+  	font-style: normal;
+ }
+
+
 html {
     font-size: 62.5%;
 }
@@ -36,6 +57,7 @@ body {
   color: #000;
   background-color: rgba(255,255,255,.99);
 }
+
 img::-moz-selection {
   color: #000;
   background-color: rgba(255,255,255,.7);

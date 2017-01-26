@@ -1,7 +1,8 @@
 /* — - - - VARIABLES ARE HERE — - - -  */
 
-$primary-color: rgb(240, 240, 240);
-$secondary-color: rgb(25, 25, 25);
+$primary-color: rgb(20, 20, 20);
+$secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(200, 200, 200);
 $transiton-speed: 0.3s;
 $spacer: 2rem;
 $page-spacer: 4rem;
@@ -10,11 +11,13 @@ $page-spacer: 4rem;
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 
 /* PINK & BLUE

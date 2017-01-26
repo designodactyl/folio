@@ -202,9 +202,7 @@ $(document).ready(function() {
         $('body,html').animate({
             scrollTop: scrollPoint
         }, 500);
-
         return false;
-
     })
 
     $(window).scroll(function() {
@@ -217,19 +215,127 @@ $(document).ready(function() {
                     $('.sideDisciplines li').removeClass('underline');
                     $('.sideDisciplines li').eq(i).addClass('underline');
                 }
-              });
-
-
+            });
         } else {
 
             $('.sideDisciplines').removeClass('appear');
             $('.sideDisciplines li').removeClass('active');
             $('.sideDisciplines li:first').addClass('active');
         }
-
-
     }).scroll();
 
 
+    //SHOW HOVER IMAGE ON ROLLOVER FOR BIG TEXT PAGE
+    $('.projectBig').mousemove(function(e) {
+        //IF THIS DOES NOT HAVE THE CLASS OUTLINE, RUN FUNCTION
+        if (!$(this).hasClass("outline")) {
+            $img = $("#" + $(this).data('image-id'))
+            $img.stop(1, 1).show();
+            $img.offset({
+                top: e.pageY + 20,
+                left: e.pageX - 200
+            });
+        };
+    }).mouseleave(function() {
+        $img = $("#" + $(this).data('image-id'))
+        $img.hide();
+    });
 
-  });
+
+    //SHOW HIDE DIVS BASED ON DISCIPLINE CAN THIS BE COMBINDED WOTH OTHER FUNCTION???
+    var $btns = $('.btn').click(function() {
+        if (this.id == 'all') {
+            $('#projectIndexBig > span').removeClass("outline");
+        } else {
+            var $el = $('.' + this.id).removeClass("outline");
+            $('#projectIndexBig > span').not($el).addClass("outline");
+        }
+        $btns.removeClass('underline');
+        $(this).addClass('underline');
+    })
+
+
+
+    //PROJECTS BIG OVERLY COMPLICATED SORT BY NAME FUNCTION, USING HTML CONTENT RATHER THAN SELECOTRS OR CLASSES.  POSSIBLE TO SIMPLYFIY??
+
+    function sortUsingNestedName(parent, childSelector, keySelector) {
+        var items = parent.children(childSelector).sort(function(a, b) {
+            var vA = $(keySelector, a).text();
+            var vB = $(keySelector, b).text();
+            return (vA < vB) ? -1 : (vA > vB) ? 1 : 0;
+        });
+        parent.append(items);
+    }
+    /* setup sort attributes */
+    $('#name').data("sortKey", "span.bigName");
+
+    /* The actual Sorting function itself */
+    function sortNames() {
+        /* Runs first function looking for content */
+        sortUsingNestedName($('#projectIndexBig'), "span", $("button.btnSortName").data("sortKey"));
+        /* Checks button classes and add and removes as necessasry */
+        if ($("#date").hasClass("underline")) {
+            $("#date").removeClass("underline");
+            $("#name").addClass("underline");
+        } else {
+            $("#name").addClass("underline");
+        }
+    }
+
+    /* sort on page load to alphabeticse all listings click */
+    $(document).ready(function() {
+        sortNames();
+    });
+    /* sort on button click */
+    $("button.btnSortName").click(function() {
+        $(".projectBig").fadeOut(150);
+        setTimeout(
+            function() {
+                sortNames();
+            },
+            150);
+        $(".projectBig").fadeIn(150);
+    });
+
+
+
+    //PROJECTS BIG OVERLY COMPLICATED SORT BY NAME FUNCTION, USING HTML CONTENT RATHER THAN SELECOTRS OR CLASSES.  POSSIBLE TO SIMPLYFIY??
+    function sortUsingNestedDate(parent, childSelector, keySelector) {
+        var items = parent.children(childSelector).sort(function(a, b) {
+            var vA = $(keySelector, a).text();
+            var vB = $(keySelector, b).text();
+            return (vA > vB) ? -1 : (vA < vB) ? 1 : 0;
+        });
+        parent.append(items);
+    }
+
+    /* setup sort attributes */
+    $('#date').data("sortKey", "span.bigDate");
+
+    /* The actual Sorting function itself */
+    function sortDates() {
+        sortUsingNestedDate($('#projectIndexBig'), "span", $("button.btnSortDate").data("sortKey"));
+
+        //ADDING UNDERLINE CLASSES
+        if ($("#name").hasClass("underline")) {
+            $("#name").removeClass("underline");
+            $("#date").addClass("underline");
+        } else {
+            $("#date").addClass("underline");
+        }
+    }
+
+        /* sort on button click */
+        $("button.btnSortDate").click(function() {
+            $(".projectBig").fadeOut(150);
+            setTimeout(
+                function() {
+                    sortDates();
+                },
+                150);
+            $(".projectBig").fadeIn(150);
+        });
+
+
+
+});

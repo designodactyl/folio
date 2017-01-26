@@ -3,10 +3,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -37,7 +39,7 @@ $secondary-color: White;
   width: calc(50vw + 3rem);
   position: fixed;
   z-index: 50;
-  background: #191919;
+  background: #f0f0f0;
   float: right;
   padding: 14.25rem 4rem 3rem 4rem;
   transition: 0.3s; }

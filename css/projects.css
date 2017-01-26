@@ -3,10 +3,12 @@
 /* NORMAL
 $primary-color: rgb(25, 25, 25);
 $secondary-color: rgb(240, 240, 240);
+$tertiary-color: rgb(0, 0, 0);
 */
 /* INVERSE
 $primary-color: rgb(240, 240, 240);
 $secondary-color: rgb(25, 25, 25);
+$tertiary-color: rgb(200, 200, 200);
 */
 /* PINK & BLUE
 $primary-color: Pink;
@@ -47,7 +49,7 @@ section {
   padding-right: 4rem; }
 
 /* — - - - PROJECTS STYLES HERE — - - -  */
-main {
+#projectIndex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -70,27 +72,6 @@ main {
 .name, .date {
   font-style: normal; }
 
-/*
-.projectImage {
-  position: absolute;
-  width: 40vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: -10;
-}
-
-.projectImage img {
-  position: fixed;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity .15s ease-in-out;
-  opacity: 0;
-}
-*/
 .projectText ul {
   display: inline-flex;
   justify-content: center;
